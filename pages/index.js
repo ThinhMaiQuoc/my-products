@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 import ProductList from '../components/ProductList';
-import { useProducts } from './hooks/useProducts';
+import { useProducts } from '../hooks/useProducts';
 
 export default function Home() {
   const { products } = useProducts();

@@ -1,11 +1,11 @@
 import { render, renderHook, screen } from '@testing-library/react';
-import { useProducts } from '../pages/hooks/useProducts';
+import { useProducts } from '../hooks/useProducts';
 
 jest.mock('../pages/hooks/useProducts', () => {
   useProductsMock: jest.fn();
 });
 
-import useProductsMock from '../pages/hooks/useProducts';
+import useProductsMock from '../hooks/useProducts';
 import Home from '../pages';
 
 describe('/Products', () => {
