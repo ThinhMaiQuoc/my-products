@@ -18,6 +18,7 @@ export const useProductReviews = ({ slug }) => {
 
   useEffect(() => {
     fetchProductReviews();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
 
   return { productReviews };
