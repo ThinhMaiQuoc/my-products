@@ -31,8 +31,8 @@ Testing tool:
 
 Deploy enviroment:
 - Ungit
-- Github
-- Vercel
+- Github (https://github.com/ThinhQuoc/my-products)
+- Vercel (https://my-products-one.vercel.app/)
 
 Extensions:
 - ESLint
