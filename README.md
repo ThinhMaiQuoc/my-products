@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+This is a NextJS ecommerce app belongs to ThinhMQ, dedicated for the Decathlon technical test.
 
-First, run the development server:
+First, i just want to say that despite looking up many resources for the Single responsibility hooks's unit test but failed to sucessfully implement any,
+Therefor beeing not able to fulfill the unit test using Jest brings me shame.
+With that beeing said, beeing able to learn new things (NextJS, Tailwind...), putting my heart into this brings me great joy and i really enjoy working on this application.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+With that out of the way let's get to my application's description.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Landing page:
+- Will display a list of products fetched from the provided API.
+- Product card will display product's basic info.
+- Hover over product's image will display product's 2nd image.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Product detail page:
+- Will display more detail of the product including basic info + Description/Availability/Reviews.
+- Reviews of the product will be fetched via product's.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Additional page:
+- 404 page.
+- All reviews page (TBD)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Development tool/libs:
+- NextJS
+- Tailwind CSS
+- Axios
 
-## Learn More
+Testing tool:
+- React testing library
+- Jest
 
-To learn more about Next.js, take a look at the following resources:
+Deploy enviroment:
+- Ungit
+- Github
+- Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Extensions:
+- ESLint
+- Prettier
+- ES6/ES7 Snippets
+- Material Icon Theme
+- Auto Import
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Things i would do to improve:
+- Unit testing
+- Implement TypeScript instead of using JavaScript (Since working in big project TS would bring alot to the table)
+- Implement Review page (via Amazon)
+- Better design (via Decathlon design page for dev)
+- Commit on every finished feature.
