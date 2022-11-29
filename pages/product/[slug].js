@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import Layout from '../../components/Layout';
-import { useProducts } from '../hooks/useProducts';
-import { useProductStock } from '../hooks/useProductStock';
+import { useProducts } from '../../hooks/useProducts';
+import { useProductStock } from '../../hooks/useProductStock';
 import ProductImg from '../../components/ProductImg';
 import ProductReviews from '../../components/ProductReview';
-import { useProductReviews } from '../hooks/useProductReview';
+import { useProductReviews } from '../../hooks/useProductReview';
 
 export default function ProductDetail() {
   const { products } = useProducts();
