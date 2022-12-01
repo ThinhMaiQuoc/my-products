@@ -43,7 +43,7 @@ export default function ProductDetail() {
                 <div className="md:col-span-2">
                   <ProductReviews productReviews={productReviews} />
                 </div>
-              ) : null}
+              ) : 'Loading...'}
             </div>
 
             <div>

@@ -10,7 +10,9 @@ export const useProductStock = ({ slug }) => {
         .get('/Stock?filterByFormula=ProductID+%3D+' + slug)
         .then((response) => {
           let stock;
-          if (response && response.data) {
+          if (response.statusText != 'OK') {
+            throw Error('Could not fetch the data...');
+          } else if (response && response.data) {
             stock = response.data.records[0].fields.Stock;
           }
           return stock;
@@ -23,13 +25,16 @@ export const useProductStock = ({ slug }) => {
           } else {
             setProductAvailability('Only ' + stock + ' items available');
           }
+        })
+        .catch((err) => {
+          console.log(err);
         });
     }
   };
 
   useEffect(() => {
     fetchProductStock();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
   return { productAvailability };
 };

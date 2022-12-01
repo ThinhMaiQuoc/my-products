@@ -9,16 +9,21 @@ export const useProductReviews = ({ slug }) => {
       axiosConfig
         .get('/Reviews?filterByFormula=ProductID+%3D+' + slug)
         .then((response) => {
-          if (response && response.data) {
+          if (response.statusText != 'OK') {
+            throw Error('Could not fetch the data...');
+          } else if (response && response.data) {
             setProductReviews(response.data.records);
           }
+        })
+        .catch((err) => {
+          console.log(err);
         });
     }
   };
 
   useEffect(() => {
     fetchProductReviews();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
 
   return { productReviews };
